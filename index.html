@@ -71,7 +71,21 @@
         <input type="text" id="task-input" placeholder="Create Task" />
         <label>Press enter to create task!</label>
       </article>
+      <ul id="task-list" class="bold">
+        <li>Do Stuff</li>
+        <li>sleep</li>
+        <li>Walk the dog</li>
+      </ul>
     </section>
+
+    <dialog id="model" open>
+      <h2 class="bold">
+        This will reset all associated data. <br />Are you sure you want to do
+        that?
+      </h2>
+      <button class="black">Yes</button>
+      <button class="black">No</button>
+    </dialog>
 
     <script src="js/date_format.js" type="text/javascript"></script>
     <script src="js/storage.js" type="text/javascript"></script>
