@@ -15,6 +15,7 @@ window.onload = function () {
   let req = window.indexedDB.open("GetItDoneAppDB", 1);
   req.onsuccess = function () {
     database = req.result;
+    onLoad();
   };
   req.onerror = function (event) {
     alert("There was an error", event);
@@ -55,7 +56,7 @@ function readTasks(store, success, error = defaultError) {
     let cursor = event.target.result;
     if (cursor) {
       let task = cursor.value;
-      taskStore.push(task);
+      tasks.push(task);
       cursor.continue();
     } else {
       success(tasks);

@@ -11,7 +11,7 @@ function loadData(key) {
     if (key in localStorage) {
       return localStorage.getItem(key);
     } else {
-      alert("Your Browser does not support localStorage API");
+      alert("(loadData Function)Your Browser does not support localStorage API");
     }
   }
 }
